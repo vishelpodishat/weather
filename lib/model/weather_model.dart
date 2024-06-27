@@ -101,3 +101,17 @@ class Sys {
     );
   }
 }
+
+class Temp {
+  final double day;
+
+  Temp({
+    required this.day,
+  });
+
+  factory Temp.fromJson(Map<String, dynamic> json) {
+    return Temp(
+      day: (json['temp'] ?? 0.0).toDouble(),
+    );
+  }
+}
